@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack -p 43125",
     "build": "next build",
+    "build:pages": "GITHUB_PAGES=true next build",
     "start": "next start -p 43125",
     "lint": "next lint",
     "gen:questions": "node scripts/generate-questions.mjs"

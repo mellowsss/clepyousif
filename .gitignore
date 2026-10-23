@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /out/
+# keep /out untracked — GitHub Actions builds it
 
 # production
 /build

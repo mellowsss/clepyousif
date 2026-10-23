@@ -7,6 +7,12 @@ Practice site for two CLEP exams:
 
 Questions are **original**, CLEP-shaped practice items weighted to College Board topic outlines. They are **not** official retired CLEP exams.
 
+## Live site (GitHub Pages)
+
+**https://mellowsss.github.io/clepyousif/**
+
+Deploys automatically from `main` via GitHub Actions (static export).
+
 ## Run locally
 
 ```bash
@@ -19,7 +25,13 @@ Open [http://127.0.0.1:43125](http://127.0.0.1:43125).
 `npm run dev` uses webpack (more reliable hydration in some environments). For a production build:
 
 ```bash
-npm run build && npm start
+npm run build && npx serve out
+```
+
+GitHub Pages build:
+
+```bash
+npm run build:pages
 ```
 
 ## Study modes

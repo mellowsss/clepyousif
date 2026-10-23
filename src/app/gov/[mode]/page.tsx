@@ -4,6 +4,10 @@ import { ResultsClient } from "@/components/ResultsClient";
 
 const MODES = ["exam", "practice", "results"] as const;
 
+export function generateStaticParams() {
+  return MODES.map((mode) => ({ mode }));
+}
+
 export default async function GovModePage({
   params,
 }: {
