@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #f3efe4;
+    --ink: #1c2430;
+    --muted-ink: #5a6572;
+    --accent: #0f6a5f;
+    --accent-soft: #d5ebe6;
+    --line: #d7d0c2;
+    --chip: #e7e1d4;
+    --panel: #ebe4d6;
+    --hero-deep: #163a45;
+    --hero-mid: #2a5f6e;
+    --glow: rgba(232, 196, 120, 0.35);
+
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: #fffdf8;
+    --card-foreground: var(--ink);
+    --popover: #fffdf8;
+    --popover-foreground: var(--ink);
+    --primary: var(--accent);
+    --primary-foreground: #f7fffc;
+    --secondary: var(--chip);
+    --secondary-foreground: var(--ink);
+    --muted: var(--chip);
+    --muted-foreground: var(--muted-ink);
+    --accent-foreground: var(--ink);
+    --destructive: #b42318;
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--accent);
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    color: var(--foreground);
+    background:
+      radial-gradient(1200px 600px at 10% -10%, var(--glow), transparent 55%),
+      radial-gradient(900px 500px at 90% 0%, rgba(15, 106, 95, 0.12), transparent 50%),
+      linear-gradient(165deg, #efe8d8 0%, var(--paper) 42%, #e7eee9 100%);
+    min-height: 100vh;
+  }
+
+  html {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .learn-grid {
+    background-image:
+      linear-gradient(rgba(28, 36, 48, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(28, 36, 48, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .animate-in-fade {
+    animation: learnFade 0.35s ease-out both;
+  }
+
+  .animate-rise {
+    animation: learnRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-rise-delay {
+    animation: learnRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  }
+
+  .animate-rise-delay-2 {
+    animation: learnRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+  }
+}
+
+@keyframes learnFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes learnRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
