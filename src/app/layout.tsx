@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { BRAND } from "@/lib/brand";
 import "./globals.css";
 
 const display = Fraunces({
@@ -13,9 +14,8 @@ const sans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Learn — CLEP Review",
-  description:
-    "Timed CLEP-style practice for American Government and U.S. History II (1865–Present).",
+  title: BRAND.name,
+  description: BRAND.description,
 };
 
 export default function RootLayout({

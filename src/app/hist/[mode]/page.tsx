@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { ExamShell } from "@/components/ExamShell";
 import { ResultsClient } from "@/components/ResultsClient";
-import { histQuestions } from "@/data/hist/questions";
 
 const MODES = ["exam", "practice", "results"] as const;
 
@@ -15,11 +14,5 @@ export default async function HistModePage({
 
   if (mode === "results") return <ResultsClient examId="hist" />;
 
-  return (
-    <ExamShell
-      examId="hist"
-      mode={mode === "exam" ? "exam" : "practice"}
-      bank={histQuestions}
-    />
-  );
+  return <ExamShell examId="hist" mode={mode === "exam" ? "exam" : "practice"} />;
 }

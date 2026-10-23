@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BRAND } from "@/lib/brand";
 import { EXAM_CONFIGS } from "@/lib/exam-config";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -23,15 +24,18 @@ export default function HomePage() {
       />
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-5xl flex-col px-5 pb-16 pt-8 md:px-8 md:pt-12">
-        <header className="animate-rise">
-          <p className="font-[family-name:var(--font-display)] text-[clamp(4.5rem,16vw,9rem)] leading-[0.85] tracking-[-0.04em] text-[#f4efe4]">
-            Learn
+        <header className="animate-rise space-y-2">
+          <p className="font-display text-[clamp(3.5rem,12vw,7rem)] leading-[0.9] tracking-[-0.04em] text-[#f4efe4]">
+            {BRAND.shortName}
+          </p>
+          <p className="font-display text-2xl md:text-3xl tracking-tight text-[#d9ebe4]">
+            {BRAND.tagline}
           </p>
         </header>
 
-        <div className="mt-6 max-w-xl animate-rise-delay space-y-4 text-[#e8f2ef]">
-          <h1 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl leading-snug text-[#f7f3ea]">
-            CLEP practice that mirrors the real exams.
+        <div className="mt-8 max-w-xl animate-rise-delay space-y-4 text-[#e8f2ef]">
+          <h1 className="font-display text-xl md:text-2xl leading-snug text-[#f7f3ea]">
+            Practice that mirrors the real CLEP exams.
           </h1>
           <p className="text-base md:text-lg text-[#d5e4df]">
             Thirty focused hours start here — timed American Government and U.S. History II
@@ -61,8 +65,9 @@ export default function HomePage() {
         </div>
 
         <p className="mt-auto pt-16 text-xs text-[var(--muted-ink)] max-w-lg">
-          Original practice items shaped to College Board CLEP outlines — not official retired
-          exams. ACE typically recommends credit at a scaled score of 50; confirm with your school.
+          {BRAND.name}: original practice items shaped to College Board CLEP outlines — not
+          official retired exams. ACE typically recommends credit at a scaled score of 50;
+          confirm with your school.
         </p>
       </div>
     </main>

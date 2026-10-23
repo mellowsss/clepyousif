@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { ExamShell } from "@/components/ExamShell";
 import { ResultsClient } from "@/components/ResultsClient";
-import { govQuestions } from "@/data/gov/questions";
 
 const MODES = ["exam", "practice", "results"] as const;
 
@@ -15,11 +14,5 @@ export default async function GovModePage({
 
   if (mode === "results") return <ResultsClient examId="gov" />;
 
-  return (
-    <ExamShell
-      examId="gov"
-      mode={mode === "exam" ? "exam" : "practice"}
-      bank={govQuestions}
-    />
-  );
+  return <ExamShell examId="gov" mode={mode === "exam" ? "exam" : "practice"} />;
 }

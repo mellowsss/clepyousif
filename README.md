@@ -1,4 +1,4 @@
-# Learn — CLEP Review
+# Yousif CLEP Exams Review
 
 Practice site for two CLEP exams:
 
@@ -11,7 +11,7 @@ Questions are **original**, CLEP-shaped practice items weighted to College Board
 
 ```bash
 npm install
-npm run dev -- -p 43125
+npm run dev
 ```
 
 Open [http://127.0.0.1:43125](http://127.0.0.1:43125).

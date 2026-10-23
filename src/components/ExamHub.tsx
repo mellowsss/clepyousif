@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { ExamId } from "@/lib/types";
+import { BRAND } from "@/lib/brand";
 import { EXAM_CONFIGS } from "@/lib/exam-config";
 import { latestResult } from "@/lib/storage";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
 export function ExamHub({ examId, bankSize }: { examId: ExamId; bankSize: number }) {
   const config = EXAM_CONFIGS[examId];
   const [last, setLast] = useState<ReturnType<typeof latestResult>>(null);
@@ -17,18 +19,15 @@ export function ExamHub({ examId, bankSize }: { examId: ExamId; bankSize: number
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 md:py-16">
-      <Link
-        href="/"
-        className="font-[family-name:var(--font-display)] text-xl text-[var(--ink)]"
-      >
-        Learn
+      <Link href="/" className="font-display text-xl text-[var(--ink)]">
+        {BRAND.shortName}
       </Link>
 
       <header className="mt-10 space-y-4">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent)]">
           {config.courseCode}
         </p>
-        <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[var(--ink)] leading-tight">
+        <h1 className="font-display text-4xl md:text-5xl text-[var(--ink)] leading-tight">
           {config.title}
         </h1>
         <p className="text-lg text-[var(--muted-ink)] max-w-2xl">{config.description}</p>
@@ -65,9 +64,7 @@ export function ExamHub({ examId, bankSize }: { examId: ExamId; bankSize: number
       </div>
 
       <section className="mt-14 space-y-4">
-        <h2 className="font-[family-name:var(--font-display)] text-2xl text-[var(--ink)]">
-          Outline weights
-        </h2>
+        <h2 className="font-display text-2xl text-[var(--ink)]">Outline weights</h2>
         <ul className="space-y-2">
           {config.topics.map((topic) => (
             <li

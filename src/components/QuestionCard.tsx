@@ -35,7 +35,7 @@ export function QuestionCard({
         </span>
       </div>
 
-      <h2 className="font-[family-name:var(--font-display)] text-2xl md:text-[1.75rem] leading-snug text-[var(--ink)] whitespace-pre-wrap">
+      <h2 className="font-display text-2xl md:text-[1.75rem] leading-snug text-[var(--ink)] whitespace-pre-wrap">
         {question.stem}
       </h2>
 

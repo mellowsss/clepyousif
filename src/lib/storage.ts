@@ -2,7 +2,7 @@
 
 import type { ExamId, ExamResult, StoredProgress } from "./types";
 
-const KEY = "learn-clep-progress-v1";
+const KEY = "yousif-clep-progress-v1";
 
 const empty: StoredProgress = {
   results: [],

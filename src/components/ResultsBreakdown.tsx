@@ -21,9 +21,7 @@ export function ResultsBreakdown({ result }: ResultsBreakdownProps) {
         <p className="text-xs uppercase tracking-[0.2em] text-[var(--accent)]">
           Session complete
         </p>
-        <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[var(--ink)]">
-          {result.percent}%
-        </h1>
+        <h1 className="font-display text-4xl md:text-5xl text-[var(--ink)]">{result.percent}%</h1>
         <p className="text-lg text-[var(--muted-ink)]">
           {result.correct} of {result.total} correct · {formatDuration(result.durationMs)} ·{" "}
           {result.mode === "exam" ? "Full exam" : "Topic drill"}
@@ -35,9 +33,7 @@ export function ResultsBreakdown({ result }: ResultsBreakdownProps) {
       </header>
 
       <section className="space-y-3">
-        <h2 className="font-[family-name:var(--font-display)] text-2xl text-[var(--ink)]">
-          By topic
-        </h2>
+        <h2 className="font-display text-2xl text-[var(--ink)]">By topic</h2>
         <ul className="space-y-2">
           {result.topicScores.map((topic) => (
             <li
@@ -99,7 +95,7 @@ export function ResultsBreakdown({ result }: ResultsBreakdownProps) {
           Topic drill
         </Link>
         <Link href="/" className={cn(buttonVariants({ variant: "ghost", size: "lg" }))}>
-          Back to Learn
+          Back home
         </Link>
       </div>
 
