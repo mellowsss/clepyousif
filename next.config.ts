@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
 
-const repo = "clepyousif";
-const isGithubPages = process.env.GITHUB_PAGES === "true";
-
+/**
+ * Static export for GitHub Pages.
+ * CI (`actions/configure-pages` + static_site_generator: next) injects
+ * basePath=/clepyousif and images.unoptimized during the Actions build.
+ */
 const nextConfig: NextConfig = {
   output: "export",
-  // Project site: https://mellowsss.github.io/clepyousif/
-  basePath: isGithubPages ? `/${repo}` : "",
-  assetPrefix: isGithubPages ? `/${repo}/` : undefined,
   images: { unoptimized: true },
-  trailingSlash: true,
 };
 
 export default nextConfig;
