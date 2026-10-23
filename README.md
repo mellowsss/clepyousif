@@ -16,6 +16,12 @@ npm run dev
 
 Open [http://127.0.0.1:43125](http://127.0.0.1:43125).
 
+`npm run dev` uses webpack (more reliable hydration in some environments). For a production build:
+
+```bash
+npm run build && npm start
+```
+
 ## Study modes
 
 - **Timed full exam** — outline-weighted random set, countdown timer, jump navigation, topic score breakdown
